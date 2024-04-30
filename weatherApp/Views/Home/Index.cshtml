@@ -7,7 +7,7 @@
  <div class="flex">
   @foreach (CityWeather city in Model)
   {
-            @await Html.PartialAsync("_CityPartial", city)
+            @await Component.InvokeAsync("City", new { city });
   }
 
  </div>
