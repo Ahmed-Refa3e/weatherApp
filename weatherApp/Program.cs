@@ -1,6 +1,12 @@
+using ServiceContracts;
+using Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddTransient<IWeatherService, WeatherService>(); //Transient Service
+
 
 var app = builder.Build();
 
